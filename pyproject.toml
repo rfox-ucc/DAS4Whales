@@ -49,7 +49,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/leabouffaut/DAS4Whales"
+Homepage = "https://github.com/rfox-ucc/DAS4Whales"
 
 [tool.hatch.version]
 path = "src/das4whales/__init__.py"
