@@ -40,7 +40,7 @@ def plot_rawdata(trace, time, dist, fig_size=(12, 10)):
     plt.show()
 
 
-def plot_tx(trace, time, dist, file_begin_time_utc=0, fig_size=(12, 10), v_min=None, v_max=None, cbar_label='Strain Envelope (x$10^{-9}$)',cable):
+def plot_tx(trace, time, dist, file_begin_time_utc=0, fig_size=(12, 10), v_min=None, v_max=None, cbar_label='Strain Envelope (x$10^{-9}$)',cable="South"):
     """
     Spatio-temporal representation (t-x plot) of the strain data
 
@@ -93,7 +93,7 @@ def plot_tx(trace, time, dist, file_begin_time_utc=0, fig_size=(12, 10), v_min=N
     return
 
 
-def plot_tx_env(trace, time, dist, file_begin_time_utc=0, fig_size=(12, 10), v_min=None, v_max=None, cbar_label='Strain Envelope (x$10^{-9}$)',cable):
+def plot_tx_env(trace, time, dist, file_begin_time_utc=0, fig_size=(12, 10), v_min=None, v_max=None, cbar_label='Strain Envelope (x$10^{-9}$)',cable="South"):
     """
     Spatio-temporal representation (t-x plot) of the strain data envelope
 
