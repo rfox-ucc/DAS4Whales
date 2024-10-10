@@ -40,7 +40,7 @@ def plot_rawdata(trace, time, dist, fig_size=(12, 10)):
     plt.show()
 
 
-def plot_tx(trace, time, dist, file_begin_time_utc=0, fig_size=(12, 10), v_min=None, v_max=None, cbar_label='Strain Envelope (x$10^{-9}$)'):
+def plot_tx(trace, time, dist, file_begin_time_utc=0, fig_size=(12, 10), v_min=None, v_max=None, cbar_label='Strain Envelope (x$10^{-9}$)',cable):
     """
     Spatio-temporal representation (t-x plot) of the strain data
 
@@ -87,7 +87,8 @@ def plot_tx(trace, time, dist, file_begin_time_utc=0, fig_size=(12, 10), v_min=N
     if isinstance(file_begin_time_utc, datetime):
         plt.title(file_begin_time_utc.strftime("%Y-%m-%d %H:%M:%S"), loc='right')
     plt.tight_layout()
-    plt.show()
+    plt.savefig(f"{cable}_cable_{file_begin_time_utc.strftime("%Y_%m_%d%H%M%S")}.png")
+    plt.close()
 
     return
 
@@ -141,6 +142,7 @@ def plot_tx_env(trace, time, dist, file_begin_time_utc=0, fig_size=(12, 10), v_m
     plt.tight_layout()
     plt.show()
     plt.savefig(f"{cable}_cable_{file_begin_time_utc.strftime("%Y_%m_%d%H%M%S")}.png")
+    plt.close()
 
     return
 
