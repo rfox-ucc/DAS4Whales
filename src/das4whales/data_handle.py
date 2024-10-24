@@ -210,7 +210,7 @@ def load_das_data(filename, selected_channels, metadata):
 
         # Selection the traces corresponding to the desired channels
         # Loaded as float64, float 32 might be sufficient? 
-        trace = raw_data[selected_channels[0]:selected_channels[1]:selected_channels[2], :].astype(np.float64)
+        trace = raw_data[:,selected_channels[0]:selected_channels[1]:selected_channels[2],].astype(np.float64)
         trace = raw2strain(trace, metadata)
 
         # UTC Time vector for naming
